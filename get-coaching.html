@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Coaching - Start Your Financial Journey with ThrivePath</title>
+    <meta name="description" content="Begin your journey to financial independence with ThrivePath's expert coaching programs. Apply now for personalized financial guidance.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="ThrivePath Logo" width="40" height="40">
+                    <span class="logo-text">ThrivePath</span>
+                </a>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="coaches.html">Our Coaches</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="get-coaching.html" class="btn btn-primary">Get Coaching</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Coaching Hero Section -->
+        <section class="hero coaching-hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 class="fade-in">Transform Your Financial Future</h1>
+                    <p>Choose the program that best fits your goals and start your journey today</p>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/coaching-session.jpg" alt="Financial coaching session in progress" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Overview -->
+        <section class="programs-section">
+            <div class="container">
+                <h2>Our Coaching Programs</h2>
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <h3>ThrivePath Blitz</h3>
+                        <p class="program-level">90-minute topic session for large groups</p>
+                        <p class="program-description">A focused, high-energy session designed to introduce a core financial topic to large audiences. Ideal for teams, community groups, and event breakouts who want practical takeaways in a short time.</p>
+                        <p class="program-cost">Cost: Contact for pricing</p>
+                        <div class="program-actions"><button class="btn btn-secondary" onclick="selectProgram('ThrivePath Blitz')">Select Program</button></div>
+                    </div>
+
+                    <div class="program-card">
+                        <h3>ThrivePath Mastermind</h3>
+                        <p class="program-level">8-week deep dive with coach assignments and feedback</p>
+                        <p class="program-description">An intimate cohort-based program with structured sessions, coach feedback, and accountability. Participants receive personalized action plans and group support to accelerate progress.</p>
+                        <p class="program-cost">Cost: Contact for pricing</p>
+                        <div class="program-actions"><button class="btn btn-secondary" onclick="selectProgram('ThrivePath Mastermind')">Select Program</button></div>
+                    </div>
+
+                    <div class="program-card">
+                        <h3>ThrivePath Income Intensive</h3>
+                        <p class="program-level">4-week program to create additional income</p>
+                        <p class="program-description">A hands-on short course focused on identifying income opportunities, quick-launch strategies, and practical steps to boost your monthly cash flow.</p>
+                        <p class="program-cost">Cost: Contact for pricing</p>
+                        <div class="program-actions"><button class="btn btn-secondary" onclick="selectProgram('ThrivePath Income Intensive')">Select Program</button></div>
+                    </div>
+
+                    <div class="program-card">
+                        <h3>ThrivePath Group Coaching</h3>
+                        <p class="program-level">90-minute group Q&amp;A, capped at 8 women</p>
+                        <p class="program-description">Small-group sessions that combine expert coaching with peer learning. Great for getting direct answers to your pressing financial questions in a supportive environment.</p>
+                        <p class="program-cost">Cost: Contact for pricing</p>
+                        <div class="program-actions"><button class="btn btn-secondary" onclick="selectProgram('ThrivePath Group Coaching')">Select Program</button></div>
+                    </div>
+
+                    <div class="program-card">
+                        <h3>ThrivePath NEXT</h3>
+                        <p class="program-level">Half-day topical event for groups of 30+</p>
+                        <p class="program-description">A curated half-day event with workshops and breakout sessions, designed for larger groups seeking immersive learning and team-based planning.</p>
+                        <p class="program-cost">Cost: Contact for pricing</p>
+                        <div class="program-actions"><button class="btn btn-secondary" onclick="selectProgram('ThrivePath NEXT')">Select Program</button></div>
+                    </div>
+
+                    <div class="program-card">
+                        <h3>ThrivePath One-on-One Coaching</h3>
+                        <p class="program-level">Private one-hour session</p>
+                        <p class="program-description">Personalized, focused coaching tailored to your situation. Great for tackling a specific challenge or creating a short-term plan with expert guidance.</p>
+                        <p class="program-cost">Cost: Contact for pricing</p>
+                        <div class="program-actions"><button class="btn btn-secondary" onclick="selectProgram('ThrivePath One-on-One Coaching')">Select Program</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Form Section -->
+        <section class="application-section">
+            <div class="container">
+                <h2>Start Your Journey</h2>
+                <div class="application-form">
+                    <form id="coachingForm" novalidate>
+                        <div class="form-group">
+                            <label for="program">Selected Program <span class="required">*</span></label>
+                            <select id="program" name="program" class="form-control" required>
+                                <option value="">Choose a program...</option>
+                                <option value="ThrivePath Blitz">ThrivePath Blitz</option>
+                                <option value="ThrivePath Mastermind">ThrivePath Mastermind</option>
+                                <option value="ThrivePath Income Intensive">ThrivePath Income Intensive</option>
+                                <option value="ThrivePath Group Coaching">ThrivePath Group Coaching</option>
+                                <option value="ThrivePath NEXT">ThrivePath NEXT</option>
+                                <option value="ThrivePath One-on-One Coaching">ThrivePath One-on-One Coaching</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="goals">Your Financial Goals <span class="required">*</span></label>
+                            <textarea id="goals" name="goals" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Previous Financial Planning Experience</label>
+                            <textarea id="experience" name="experience" class="form-control" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Expect Section -->
+        <section class="expectations-section">
+            <div class="container">
+                <h2>What to Expect</h2>
+                <div class="expectations-grid">
+                    <div class="expectation-card">
+                        <h3>1. Application Review</h3>
+                        <p>We'll review your application within 24-48 hours.</p>
+                    </div>
+                    <div class="expectation-card">
+                        <h3>2. Initial Consultation</h3>
+                        <p>Schedule a free 30-minute consultation with your matched coach.</p>
+                    </div>
+                    <div class="expectation-card">
+                        <h3>3. Program Customization</h3>
+                        <p>Your coach will create a personalized plan based on your goals.</p>
+                    </div>
+                    <div class="expectation-card">
+                        <h3>4. Begin Your Journey</h3>
+                        <p>Start your transformation with regular coaching sessions and support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="coaches.html">Our Coaches</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="get-coaching.html">Get Coaching</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="tel:1234567890">Phone: (123) 456-7890</a></li>
+                        <li><a href="mailto:info@thrivepath.com">Email: info@thrivepath.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2025 | ThrivePath</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Program Selection
+        function selectProgram(programName) {
+            const programSelect = document.getElementById('program');
+            programSelect.value = programName;
+            programSelect.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
